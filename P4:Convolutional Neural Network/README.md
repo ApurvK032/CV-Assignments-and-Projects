@@ -62,6 +62,11 @@ P4:Convolutional Neural Network/
 ├── ReducedMNIST/           # Dataset directory
 │   ├── mnist_train.mat
 │   └── mnist_test.mat
+├── images/                 # Confusion matrix visualizations
+│   ├── Figure_1.png        # SLP Linear confusion matrix
+│   ├── Figure_2.png        # SLP confusion matrix
+│   ├── Figure_3.png        # MLP confusion matrix
+│   └── Figure_4.png        # CNN confusion matrix
 ├── slp_linear.npz          # Trained weights - Linear Perceptron
 ├── slp.npz                 # Trained weights - Softmax Perceptron
 ├── mlp.npz                 # Trained weights - Multi-Layer Perceptron
@@ -182,6 +187,28 @@ conda install numpy matplotlib scipy
 | **SLP** | ~90% | ✅ Passed |
 | **MLP** | ~91%+ | ✅ Passed |
 | **CNN** | Target: >92% | 🔄 In Progress |
+
+### Confusion Matrices
+
+#### Single-Layer Linear Perceptron
+![SLP Linear Confusion Matrix](images/Figure_1.png)
+
+*Accuracy: ~30% - Random initialization with Euclidean loss*
+
+#### Single-Layer Perceptron with Softmax
+![SLP Confusion Matrix](images/Figure_2.png)
+
+*Accuracy: ~90% - Softmax activation with cross-entropy loss*
+
+#### Multi-Layer Perceptron
+![MLP Confusion Matrix](images/Figure_3.png)
+
+*Accuracy: ~91% - 30 hidden units with ReLU activation*
+
+#### Convolutional Neural Network
+![CNN Confusion Matrix](images/Figure_4.png)
+
+*Target: >92% - 3×3 convolution with max pooling*
 
 ### Training Time (on MSI)
 - **SLP Linear:** ~10 seconds
